@@ -26,7 +26,6 @@ jobs:
 
     - name: Run tests with coverage
       run: npm run test_c8
-      working-directory: .
 
     - name: Upload coverage to Coveralls
       run: npm install coveralls && npx coveralls
