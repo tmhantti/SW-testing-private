@@ -23,7 +23,7 @@ jobs:
         node-version: '16'
 
     - name: Install dependencies
-      run: npm -g install
+      run: npm install
 
     - name: Run tests with coverage
       run: npm run test_c8
