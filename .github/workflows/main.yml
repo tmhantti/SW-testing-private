@@ -25,12 +25,10 @@ jobs:
     - name: Set permissions
       run: chmod -R 755 *
       
-    - name: npm install, make test-coverage
-      run: |
+    - name: npm install
+      run: 
         npm install
-        make test-coverage
         
-    - name: Coveralls
-      uses: coverallsapp/github-action@v2
-
-     
+    - name: run tests
+      run: 
+        npm run test_nyc        
