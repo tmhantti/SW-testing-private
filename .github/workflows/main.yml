@@ -22,7 +22,7 @@ jobs:
       with:
         node-version: '16'
     - name: Permissions
-      run: chmod -R 755 sw-test-app
+      run: chmod -R 755
       
     - name: Install dependencies
       run: npm install
