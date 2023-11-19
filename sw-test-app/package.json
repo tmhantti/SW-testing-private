@@ -1,8 +1,5 @@
 {
   "name": "sw-test-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "mocha 'tests/**/*.js' --require @babel/register",
     "test_c8": "c8 mocha 'tests/**/*.js' --require @babel/register"
