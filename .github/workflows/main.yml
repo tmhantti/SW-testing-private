@@ -29,6 +29,10 @@ jobs:
       run: 
         npm install
         
+    - name: install nyc globally
+      run:
+        npm i nyc -g
+        
     - name: run tests
       run: 
-        npm run test_nyc        
+        nyc npm test       
