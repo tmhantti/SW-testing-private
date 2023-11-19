@@ -31,5 +31,5 @@ jobs:
     - name: Run tests with coverage
       run: npm run test
 
-    # - name: Upload coverage to Coveralls
-    #  run: npm install coveralls && npx coveralls
+    - name: Upload coverage to Coveralls
+      run: npm install coveralls && npx coveralls
