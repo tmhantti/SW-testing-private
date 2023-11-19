@@ -21,8 +21,9 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '16'
-    - name: Permissions
-      run: chmod -R 755
+    
+    - name: Set permissions
+      run: chmod -R 755 *
       
     - name: Install dependencies
       run: npm install
