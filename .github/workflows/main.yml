@@ -36,8 +36,15 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
     steps:
-      - name: Upload coverage to Coveralls
-        run: 
-          nyc report --reporter=text-lcov | coveralls
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Upload coverage to Coveralls
+      run: nyc report --reporter=text-lcov | coveralls
     env:
-        COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+      COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
