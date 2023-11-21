@@ -31,6 +31,9 @@ jobs:
     - name: run tests
       run: 
         npm run test         
+
+    - name: create report
+      run: nyc report --reporter=text-lcov
         
     - name: Coveralls
       uses: coverallsapp/github-action@v2
