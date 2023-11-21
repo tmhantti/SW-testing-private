@@ -30,13 +30,13 @@ jobs:
         
     - name: run tests
       run: 
-        npm run test       
-
-    - name: Coveralls
-      uses: coverallsapp/github-action@main   
+        npm run test         
         
     - name: upload to Coveralls
       run: 
         nyc report --reporter=text-lcov | coveralls    
+        
+    - name: Coveralls
+      uses: coverallsapp/github-action@main         
     env:
       COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}        
