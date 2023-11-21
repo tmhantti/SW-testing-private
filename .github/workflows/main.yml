@@ -32,11 +32,7 @@ jobs:
       run: 
         npm run test         
         
-    - name: upload to Coveralls
-      run: 
-        nyc report --reporter=text-lcov | coveralls    
-        
     - name: Coveralls
-      uses: coverallsapp/github-action@main         
+      uses: coverallsapp/github-action@v2
     env:
       COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}        
