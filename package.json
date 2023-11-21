@@ -3,7 +3,8 @@
   "scripts": {
     "test_old": "mocha 'tests/**/*.js' --require @babel/register",
     "test_c8": "c8 mocha 'tests/**/*.js' --require @babel/register",
-    "test": "nyc mocha 'tests/**/*.js' --require @babel/register"
+    "test_old2": "nyc mocha 'tests/**/*.js' --require @babel/register",
+    "test": "nyc --reporter=html --reporter=text mocha 'tests/**/*.js' --require @babel/register"
   },
   "keywords": [],
   "author": "",
