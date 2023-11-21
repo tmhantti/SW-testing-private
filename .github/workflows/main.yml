@@ -44,6 +44,10 @@ jobs:
       with:
         node-version: '16'
 
+    - name: npm install
+      run: 
+        npm install           
+
     - name: Upload coverage to Coveralls
       run: nyc report --reporter=text-lcov | coveralls
     env:
