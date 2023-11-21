@@ -33,9 +33,7 @@ jobs:
         npm run test       
 
     - name: Coveralls
-      uses: coverallsapp/github-action@main
-      with:
-        COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}    
+      uses: coverallsapp/github-action@main   
         
     - name: upload to Coveralls
       run: 
