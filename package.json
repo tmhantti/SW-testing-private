@@ -1,9 +1,9 @@
 {
   "name": "sw-test-app",
   "scripts": {
-    "test": "mocha 'tests/**/*.js' --require @babel/register",
+    "test_old": "mocha 'tests/**/*.js' --require @babel/register",
     "test_c8": "c8 mocha 'tests/**/*.js' --require @babel/register",
-    "test_nyc": "nyc mocha 'tests/**/*.js' --require @babel/register"
+    "test": "nyc mocha 'tests/**/*.js' --require @babel/register"
   },
   "keywords": [],
   "author": "",
