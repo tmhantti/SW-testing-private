@@ -15,18 +15,11 @@ jobs:
     - name: Set up node.js
       uses: actions/setup-node@v3
       with:
-        node-version: '16'
-    
-    - name: Set permissions
-      run: chmod -R 755 *
+        node-version: '16'    
       
     - name: npm install
       run: 
-        npm install
-        
-    - name: install nyc globally
-      run:
-        npm i nyc -g
+        npm install        
         
     - name: run tests
       run: 
