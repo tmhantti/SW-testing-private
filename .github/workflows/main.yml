@@ -7,23 +7,15 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-
-    - name: Set up node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '16'    
-      
-    - name: npm install
-      run: 
-        npm install        
-        
-    - name: run tests
-      run: 
-        npm run test         
-
-    - name: create report
-      run: nyc report --reporter=lcov --reporter=text-lcov      
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 19
+          cache: npm
+      - name: install dependencies
+        run: npm ci
+      - name: run tests 
+        run: npm run mocha     
+      - name: create test report
+        run: nyc report --reporter=lcov --reporter=text-lcov      
