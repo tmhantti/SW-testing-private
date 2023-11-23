@@ -16,6 +16,6 @@ jobs:
       - name: install dependencies
         run: npm ci
       - name: run tests 
-        run: npm run mocha     
+        run: npm run test     
       - name: create test report
         run: nyc report --reporter=lcov --reporter=text-lcov      
